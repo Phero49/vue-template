@@ -1,0 +1,9 @@
+@tailwind utilities;
+@tailwind base;
+
+@tailwind components;
+.container-home{
+    background-image: url(../src/assets/pexels-pixabay-302549.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
