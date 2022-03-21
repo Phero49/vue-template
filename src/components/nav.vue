@@ -10,7 +10,10 @@ const props = defineProps({
 const close = ref(false)
 const router = useRouter()
 
-
+router.beforeEach((to,from, next)=>{
+ close.value = false
+ next()
+})
 
 
 
@@ -26,19 +29,23 @@ const Events = defineEmits(["closed"])
       <close-vue class="float-right"  @click="close = false" v-show="close"/>
 
     <div class="py-28 "> 
-         <h5 class="text-center my-5 text-xl">Menu</h5>
- <ul class="text-center text-2xl font-semibold space-y-5 text-black ">
+         
+ <ul class="text-center text-2xl font-light space-y-5 text-black capitalize">
     <li>
+            <router-link to="/" >Home</router-link>
+          </li> <li>
             <router-link to="/about" >About</router-link>
           </li>
-          <li>
-            <router-link to="/gallery">photography</router-link>
-          </li>
+   
+          
           <li>
             <router-link to="/service">services</router-link>
           </li>
           <li>
             <router-link to="/contact">contact</router-link>
+          </li>
+          <li>
+            <router-link to="/gallery">photography</router-link>
           </li>
  </ul>
     </div>

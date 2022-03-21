@@ -1,63 +1,11 @@
 <script setup>
-import menuVue from './assets/menu.vue';
-import closeVue from './assets/close.vue';
-import {ref} from "vue"
-const close = ref(false)
+import navVue from '../components/nav.vue';
+
 
 </script>
 <template>
   <div class="container-home">
-    <div class="h-full fixed  w-full blur-1 bg-cyan-300 " v-show="close" >
-      <close-vue class="float-right"  @click="close = false" v-show="close"/>
-
-    <div class="py-28 ">
-         <h5 class="text-center my-5 text-xl">Menu</h5>
- <ul class="text-center text-2xl font-semibold space-y-5 text-black ">
-    <li>
-            <router-link to="">About</router-link>
-          </li>
-          <li>
-            <router-link to="">photography</router-link>
-          </li>
-          <li>
-            <router-link to="">services</router-link>
-          </li>
-          <li>
-            <router-link to="">contact</router-link>
-          </li>
- </ul>
-    </div>
-
-
-    </div>
-    <div
-      class="flex py-5 justify-between text-white"
-      style="background-color: rgba(0, 0, 0, 0.5)"
-    >
-      <div class="mx-4">
-        <h1 class="font-bold text-2xl">Some title</h1>
-      </div>
-      <div>
-      <div class="lg:hidden">
-    <menu-vue  @click="close = true" v-show="!close" />
-      </div>
-        <ul class="lg:flex hidden justify-between space-x-6 mx-5">
-          <li>
-            <router-link to="">About</router-link>
-          </li>
-          <li>
-            <router-link to="">photography</router-link>
-          </li>
-          <li>
-            <router-link to="">services</router-link>
-          </li>
-          <li>
-            <router-link to="">contact</router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-
+  <nav-vue />
     <div class="">
       <div class="flex justify-center mx-10 py-28">
         <div></div>
@@ -65,7 +13,7 @@ const close = ref(false)
         <div>
           <div class="my-6 ">
             <div class="mx-7">
-              <button class="rounded hidden bg-black p-2 px-5 mr-3  text-white">
+              <button  class="rounded  bg-black p-2 px-5 mr-3  text-white">
                 Search
               </button>
               <input
@@ -114,7 +62,7 @@ const close = ref(false)
     >
       <div>
         <img
-          src="./assets/pexels-asad-photo-maldives-457882.jpg "
+          src="../assets/pexels-asad-photo-maldives-457882.jpg "
           class="h-1/5 rounded"
           alt=""
           srcset=""
@@ -136,7 +84,7 @@ const close = ref(false)
   </div>
   
 <footer class="bg-black">
- <div class="lg:grid lg:grid-cols-3 py-6 gap-10 space-y-10 text-white">
+ <div class="grid lg:grid-cols-3 md:grid-cols-2 py-6 gap-10 space-y-10 text-white">
     <div class="ml-5">
       <h5 class="font-semibold text-2xl my-4">sign up for news letter</h5>
       <div>
@@ -170,9 +118,9 @@ const close = ref(false)
       </div>
     </div>
 
-    <div class="lg:ml-10 ml-5">
-      <h4 class="font-semibold text-gray-300 text-2xl my-4">services</h4>
-      <ul class="text-gray-100 font-light">
+    <div class="md:ml-10 ml-5">
+      <h4 class="font-semibold text-gray-300 text-2xl lg:my-4 ">services</h4>
+      <ul class="text-gray-100 font-light ">
         <li class="hover:underline hover:font-normal hover:text-base">
           Veces el sin hello
         </li>
@@ -189,21 +137,22 @@ const close = ref(false)
     </div>
 
     <div class="mx-5">
-      <h2 class="font-semibold text-xl mr-7 text-right my-6">follow us</h2>
+      
+      <h2 class="font-semibold text-xl mr-7 text-right md:text-left md:ml-10 my-6">follow us</h2>
 
       <div class="flex flex-wrap justify-end space-x-7">
         <div>
-          <img src="./assets/snapchat-3649933.svg" height="30" alt="" />
+          <img src="../assets/snapchat-3649933.svg" height="30" alt="" />
         </div>
 
         <div>
-          <img src="./assets/twitter-3649938.svg" height="30" alt="" />
+          <img src="../assets/twitter-3649938.svg" height="30" alt="" />
         </div>
         <div>
-          <img src="./assets/instagram-3649926.svg" height="30" alt="" />
+          <img src="../assets/instagram-3649926.svg" height="30" alt="" />
         </div>
         <div>
-          <img src="./assets/facebook-3649924.svg" height="30" alt="" />
+          <img src="../assets/facebook-3649924.svg" height="30" alt="" />
         </div>
       </div>
     </div>
